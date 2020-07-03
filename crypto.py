@@ -70,13 +70,15 @@ EXAMPLES:
     shift_cipher_bruteforce('hello')
     encrypt_vigenere('TEXT', 'KEY')
     decrypt_vigenere('DIVD', 'KEY')
-    exit()
 
 Currently supported ciphers:
     shift_cipher_key(text, shift)
     shift_cipher_bruteforce(text)
     encrypt_vigenere(plaintext, key)
     decrypt_vigenere(ciphertext, key)
+
+To exit:
+    exit()
 
 I am constantly trying to make this cipher decoder better and more secure! Help me add support to more ciphers by submitting a PR at "repository-link"!
 Hope it helps you!
@@ -86,9 +88,9 @@ Hope it helps you!
     try:
         eval(input())
     except BaseException as e:
-        if str(e) == "None" and str(type(e)) == "<class 'SystemExit'>":
+        if str(type(e)) == "<class 'SystemExit'>":
             print("Thank you for using cipher decoder!")
             break
         else:
-            print("Sorry that cipher is not yet supported!")
+            print("Something went wrong!")
 
